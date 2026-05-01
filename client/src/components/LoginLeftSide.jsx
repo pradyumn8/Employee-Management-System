@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LoginLeftSids = () => {
+const LoginLeftSide = () => {
     return (
         <div className='hidden md:flex w-1/2 bg-indigo-950 relative overflow-hidden border-r border-slate-200'>
 
@@ -15,4 +15,4 @@ const LoginLeftSids = () => {
     )
 }
 
-export default LoginLeftSids
+export default LoginLeftSide
