@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { dummyProfileData } from '../assets/assets'
-import { MenuIcon, UserIcon, XIcon, LayoutGridIcon, CalendarIcon, DollarSignIcon, SettingsIcon, ChevronRightIcon, FileTextIcon } from 'lucide-react'
+import { MenuIcon, UserIcon, XIcon, LayoutGridIcon, CalendarIcon, DollarSignIcon, SettingsIcon, ChevronRightIcon, FileTextIcon, LogOutIcon } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 
 const Sidebar = () => {
@@ -27,6 +27,10 @@ const Sidebar = () => {
         {name: "Settings", href: "/settings", icon: SettingsIcon},
         {name: "Leave", href: "/leave", icon: FileTextIcon},
     ]
+
+    const handleLogout = () => {
+        window.location.href = "/login"
+    }
 
     const sidebarContent = (
         <>
@@ -85,7 +89,12 @@ const Sidebar = () => {
         </div>
 
         {/* Logout */}
-
+            <div className='p-3 border-t border-white/6'>
+                <button onClick={handleLogout``} className='flex items-center gap-3 w-full px-3 py-2.5 rounded-md text-[13px] font-medium text-slate-400 hover:text-rose-400 hover:bg-rose-500/8 transition-all duration-150'>
+                    <LogOutIcon className='w-[17px] h-[17px]'/>
+                    <span>Log out</span>
+                </button>
+            </div>
 
         </>
     )
